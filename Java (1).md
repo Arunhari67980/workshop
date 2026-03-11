@@ -396,6 +396,77 @@ public class Main {
     }
 }
                                            
-                                        
+###### Operators
 
-    
+*Arithmetic Operator
+*Relational Operator
+*Logical Operator
+*Bitwise Operator
+*Assignment Operator
+*Increament/Decreament Operator
+*Conditional Operator
+
+Eg:
+
+Class Main {
+    public static void main(string[] args){
+        boolean b=false;
+        if(!b){
+            system.out.print("Yes")
+        }
+    }
+}
+
+Class Main{
+    public static void main(string[] args)
+    {
+        system.out.println(5|4);
+        system.out.println(5&4);
+
+    }
+}
+
+
+| a | b | a \| b | a & b | a ^ b |
+|---|---|-------|-------|-------|
+| 0 | 0 |   0   |   0   |   0   |
+| 0 | 1 |   1   |   0   |   1   |
+| 1 | 0 |   1   |   0   |   1   |
+| 1 | 1 |   1   |   1   |   0   |
+
+
+Eg:
+
+Class Main {
+    public static void main(string[] args){
+        system.out.println(2<<5);  //64
+        system.out.println(8>>2);  //2
+    }
+}
+
+Formulae:
+
+Left shift : if a<<b then a*(2^b)
+Right shift : if a>>b then a/(2^b)
+
+Assignment Operator:
+
+* +=
+* -=
+* *=
+* /=
+* == || ===
+
+Increament Operator:
+
+* a++ (post-increament)
+* ++b (pre-increament)
+
+=>Pre-Increament:
+
+     * Value is increased first and then the value is assigned.
+
+=>Post-Increament:
+
+     * Value is assigned first then the increament occurs.
+
