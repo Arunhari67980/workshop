@@ -470,3 +470,24 @@ Increament Operator:
 
      * Value is assigned first then the increament occurs.
 
+Eg:
+
+++a  +  ++a = 15
+++a  +  a++ = 14
+a++  +  a++ = 13
+a++  +  ++a = 14
+
+
+=>Ternary Operator:
+
+Class Main{
+    public static void main(string[] args){
+        int a=9, b=5;
+        int c=(a<b)?a:b;
+        System.out.print(c);
+    }
+}
+
+=>Syntax:
+
+    conditional operator=>(condition)?statement1:statement2;
