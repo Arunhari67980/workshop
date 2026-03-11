@@ -491,3 +491,8 @@ Class Main{
 =>Syntax:
 
     conditional operator=>(condition)?statement1:statement2;
+
+=>Commands
+
+    // => Single Line Command.
+    /*.....*/ => Multi Line Command.
