@@ -496,3 +496,146 @@ Class Main{
 
     // => Single Line Command.
     /*.....*/ => Multi Line Command.
+
+##### Electricity Example Program:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        double units = s.nextDouble();
+        double bill = 0;
+
+        if (units <= 50) {
+            bill = units * 1;
+        } 
+        else if (units <= 150) {
+            bill = 50 * 1 + (units - 50) * 2;
+        } 
+        else if (units <= 250) {
+            bill = 50 * 1 + 100 * 2 + (units - 150) * 3;
+        } 
+        else {
+            bill = 50 * 1 + 100 * 2 + 100 * 3 + (units - 250) * 4;
+        }
+
+        if (bill > 150) {
+            bill = bill + bill * 0.20;
+        }
+
+        System.out.println((int)bill);
+    }
+}
+
+
+###### Triangle Based Example Program:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      
+      Scanner s=new Scanner(System.in);
+      int a= s.nextInt();
+      int b= s.nextInt();
+      int c= s.nextInt();
+      if(a+b+c==180 && a>0 && b>0 && c>0){
+        System.out.println("VALID");
+        if(a==b && b==c){
+          System.out.println("EQUILALTERAL");
+        }
+        else if(a==b || b==c || c==a){
+          System.out.println("ISOSCELES");
+      }
+      else{
+        System.out.println("SCALENE");
+      }
+      }
+      else{
+        System.out.println("NOT VALID");
+      }
+      
+    }
+}
+
+##### For Loop:
+ Syntax:
+
+ * for(initialization;condition;increament/decreament){
+    .......
+    .....
+    ...
+    .
+ }
+
+
+##### Factorial Example:
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int count = 1;
+        for(int i = 1; i <= a; i++){
+           count=count*i;
+        }
+        System.out.println(count);
+    }
+}
+
+
+###### Take an integer and print "YES" if the integer is prime and "NO" if it is not.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int n = s.nextInt();
+        boolean Prime = true;
+
+        for(int i = 2; i <= n/2; i++){
+            if(n % i == 0){
+                Prime = false;
+                break;
+            }
+        }
+        if(Prime){
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
+
+##### Take two numbers and find product of all numbers between them that satisfy following condition (inclusive range):
+-> Numbers should be even
+-> Second last digit of number is 4
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+       Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        int product=1;
+        boolean br=false;
+        for(int i=a;i<=b;i++){
+          if(i%2==0 && (i/10)%10==4){
+            product=product*i;
+            br=true;
+          }
+        }
+        if(br){
+          System.out.println(product);
+        }
+        else{
+           System.out.println(0);
+        }
+    }
+}
