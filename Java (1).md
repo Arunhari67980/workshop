@@ -639,3 +639,37 @@ public class Main {
         }
     }
 }
+
+
+
+##### Patterns:
+
+* Nested For-loop
+
+* While Loop:
+      
+        It is a Entry - check loop 
+
+   Syntax:
+
+   While(condition){
+    .......
+    ......
+    ......
+
+   }
+
+
+Eg:
+
+import java.util.*;
+public class Main{
+    public static void main(string[] args){
+        int i=7;
+        while(i<=10){
+            System.out.println(i);
+            i++;
+        }
+    }
+    
+}
