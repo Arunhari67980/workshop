@@ -666,10 +666,171 @@ import java.util.*;
 public class Main{
     public static void main(string[] args){
         int i=7;
-        while(i<=10){
+        do(i<=10){
             System.out.println(i);
             i++;
-        }
+        }while(i<=10);
     }
     
+}
+
+
+=> Mathod Calling
+
+public class Operations{
+public static void add(int a,int b,int c){
+System.out.print(a+b+c);
+}
+public void add1(int a,int b){
+System.out.print(a+b+c);
+}
+public static void main(String[] args){
+    Operations obj=new Operations();
+    obj.add(1,5,3);
+}
+}
+
+public class Operations{
+    public static int add(int a,int b){
+        return a+b;
+    }
+    public static void main(String[] args){
+        System.out.println(add(1,2)); //Static Mathod calling
+        int a=add(5,6);
+        System.out.print(a);
+    }
+}
+
+=> Method Overloading:
+
+    * It is Overloaded with same class name and mathod but different parameters.
+
+    Eg: 
+    import java.util.*;
+    public class Operations{
+    public static int add(int a,int b){
+        return a+b;
+    }
+     public static double add(double a,double b){
+        return a+b;
+    }
+     public static int add(int a,int b,int c){
+        return a+b+c;
+    }
+    public static void main(String[] args){
+        System.out.println(add(1,2));//Static Mathod calling
+        System.out.println(add(1.2,2.3));
+        System.out.println(add(1,2,3));
+        
+    }
+}
+
+###### Array
+
+   *Array is the collection of elements of similar data types.
+
+
+        
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+      //int arr[]={1,2,3,4,5,7};
+      Scanner s=new Scanner(System.in);
+      int n=s.nextInt();
+      int arr[]=new int[n];
+      
+      for(int i=0;i<n;i++){
+        arr[i]=s.nextInt();
+      }
+      
+      for(int i=0;i<n;i++){
+        System.out.print(arr[i]+" ");
+      }
+      
+      
+    }
+}
+
+#### For Enhanced Loop:
+
+for(int a:arr){
+    System.out.print(a+" ");
+}
+
+
+#### Eg1:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int arr[] = new int[10];
+        int sum = 0;
+        for(int i = 0; i < 10; i++){
+            arr[i] = s.nextInt();  
+            sum =sum+arr[i];         
+        }
+        System.out.println(sum);    
+    }
+}
+
+#### Eg2:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int x = sc.nextInt();   // number to insert
+        int n = sc.nextInt();   // size of array
+
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        int index;
+
+        if(n % 2 == 0)
+            index = n / 2;
+        else
+            index = (n - 1) / 2;
+
+        for(int i = 0; i < index; i++){
+            System.out.println(arr[i]);
+        }
+
+        System.out.println(x);
+
+        for(int i = index; i < n; i++){
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+
+##### Eg3:
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for(int i = 0; i < n; i++){
+            arr[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i < n; i++){
+            if(i == 2) continue;   // skip second index
+            System.out.println(arr[i]);
+        }
+    }
 }
